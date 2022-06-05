@@ -52,7 +52,10 @@ const SignUp = () => {
 		}
 	};
 
-	const googleError = () => alert("Google Sign In was unsuccessful. Try again later");
+	const googleError = (e) => {
+		alert("Google Sign In was unsuccessful. Try again later");
+		console.log(e);
+	};
 
 	const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -80,8 +83,8 @@ const SignUp = () => {
 					<Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
 						{isSignup ? "Sign Up" : "Sign In"}
 					</Button>
-					<GoogleLogin
-						clientId="564033717568-bu2nr1l9h31bhk9bff4pqbenvvoju3oq.apps.googleusercontent.com"
+					{/* <GoogleLogin
+						clientId="965565402552-qtoe4v6s9n78eolo8p2gbpttkbkpmi8h.apps.googleusercontent.com"
 						render={(renderProps) => (
 							<Button className={classes.googleButton} color="primary" fullWidth onClick={renderProps.onClick} disabled={renderProps.disabled} startIcon={<Icon />} variant="contained">
 								Google Sign In
@@ -90,7 +93,7 @@ const SignUp = () => {
 						onSuccess={googleSuccess}
 						onFailure={googleError}
 						cookiePolicy="single_host_origin"
-					/>
+					/> */}
 					<Grid container justify="flex-end">
 						<Grid item>
 							<Button onClick={() => setIsSignup((prevIsSignup) => !prevIsSignup)}>{isSignup ? "Already have an account? Sign in" : "Don't have an account? Sign Up"}</Button>
