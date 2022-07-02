@@ -1,6 +1,6 @@
 # mern-social-media
 
-# PICSTAGRAM
+# Memories
 
 Implemented Full Stack Project using React, Redux, Express, MongoDB (Mongoose).
 
